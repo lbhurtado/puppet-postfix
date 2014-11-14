@@ -2,7 +2,9 @@ define postfix::postconf (
   $key = '',
   $value,
 ) {
-
+  
+  include postfix
+  
   $real_key = $key?{
     ''      => $name,
     default => $key
